@@ -20,13 +20,13 @@ import {
     };
    
     function times(e) { 
-      e.preventDefault(); 
-      setResult((result) => result * Number(inputRef.current.value)); 
+      e.preventDefault();
+      inputRef.current.value==0 ? setResult(0) : setResult((result) => result * Number(inputRef.current.value));
     }; 
    
     function divide(e) { 
       e.preventDefault(); 
-      setResult((result) => result / Number(inputRef.current.value)); 
+      inputRef.current.value==0 ? setResult(0) : setResult((result) => result / Number(inputRef.current.value)); 
     };
    
     function resetInput(e) { 
